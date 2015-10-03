@@ -19,11 +19,15 @@ Maak een NetBeans-project om de web service te testen (een gewone console-applic
 
 Tips: Laat NetBeans de Web Service Client genereren. 
 
+![Spell checker in console application][spell]
+
 ## Opgave 3
 
 Gebruik daarna deze webservice als datalaag voor een GUI-applicatie. In de applicatie krijg je een overzicht van de beschikbare woordenboeken. Verder kan je de beginletters van een woord opgeven. De applicatie zoekt dan in de beschikbare woordenboeken alle woorden die starten met deze prefix. Selecteer je een gevonden woord en klik je op "definitie", dan krijg je de bijhorende verklaring. De GUI-applicatie is reeds ontwikkeld en maakt gebruik van een dummy-implementatie van de datalaag (be.tiwi.woordenboek.impl.WoordenboekDAODummy). Vervang deze dummy-implementatie door een implementatie die de data ophaalt van de bovenstaande webservice.
 
 De GUI-applicatie bevat de volgende bestanden te ontwikkelen: Woordenboek.java, WoordenboekDAO.java, WoordenboekDAODummy, WoordenboekFrame.java en WoordenboekFrame.form.
+
+![GUI for spell checker][gui]
 
 ## Opgave 4
 
@@ -43,3 +47,5 @@ Maak een nieuw console-project TestEquationService. Definieer hierin een Web Ser
 Hoe wordt de nulpunten-array hier geïmplementeerd? 
 
 [dict]: http://services.aonaware.com/DictService/DictService.asmx
+[spell]: https://raw.githubusercontent.com/EMerckx/distributed-applications/master/lab01/res/spellcheck.png
+[gui]: https://raw.githubusercontent.com/EMerckx/distributed-applications/master/lab01/res/woordenboekGUI.jpg
