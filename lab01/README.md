@@ -42,6 +42,8 @@ Test uit via de browser. Enkele testcases:
 
 Bekijk het SOAP-antwoord. Hoe wordt de nulpunten-array voorgesteld?
 
+## Opgave 5
+
 Maak een nieuw console-project TestEquationService. Definieer hierin een Web Service Client die gebruik maakt van EquationService. Roep de operatie solveQuadratic op en schrijf het resultaat uit. Zorg ook voor gepaste foutafhandeling.
 
 Hoe wordt de nulpunten-array hier geïmplementeerd? 
