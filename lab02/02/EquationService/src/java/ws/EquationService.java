@@ -17,7 +17,7 @@ import javax.jws.WebParam;
 public class EquationService {
 
     @WebMethod(operationName = "solveQuadratic")
-    public double[] solveQuadratic(@WebParam(name = "a") int a, @WebParam(name = "b") int b, @WebParam(name = "c") int c) {
+    public double[] solveQuadratic(@WebParam(name = "c2") int a, @WebParam(name = "c1") int b, @WebParam(name = "c0") int c) {
         int d = b * b - 4 * a * c;
 
         double[] solutions;

@@ -20,12 +20,18 @@
         <mkdir dir="${build.generated.dir}/jax-wsCache/EquationService"/>
         <property name="wsdl-EquationService" location="xml-resources/web-service-references/EquationService/wsdl/localhost_8080/EquationService/EquationService.wsdl"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EquationService" destdir="${build.generated.dir}/jax-wsCache/EquationService" wsdl="${wsdl-EquationService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/EquationService/EquationService?wsdl" xnocompile="true" xendorsed="true">
+            <binding dir="xml-resources/web-service-references/EquationService/bindings" includes="EquationService_handler.xml"/>
             <depends file="${wsdl-EquationService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/EquationService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
             <fileset dir="${build.generated.dir}/jax-wsCache/EquationService">
                 <include name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EquationService">
+                <include name="**/*.xml"/>
             </fileset>
         </copy>
     </target>

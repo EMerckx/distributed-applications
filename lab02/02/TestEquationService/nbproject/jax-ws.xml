@@ -7,6 +7,10 @@
       <local-wsdl-file>localhost_8080/EquationService/EquationService.wsdl</local-wsdl-file>
       <package-name>ws</package-name>
       <catalog-file>catalog.xml</catalog-file>
+      <binding>
+        <file-name>EquationService_handler.xml</file-name>
+      </binding>
+      <handler-binding-file>EquationService_handler.xml</handler-binding-file>
       <wsimport-options>
         <wsimport-option>
           <wsimport-option-name>extension</wsimport-option-name>

@@ -1,0 +1,1 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><S:Body><ns2:solveQuadratic xmlns:ns2="http://ws/"><a>1</a><b>-5</b><c>6</c></ns2:solveQuadratic></S:Body></S:Envelope>

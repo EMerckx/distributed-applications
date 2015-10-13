@@ -17,6 +17,8 @@ public class TestEquationService {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        MySoapHandler 
+        
         List<Double> list = solveQuadratic(1, -5, 6);
         for(int i=0; i<list.size(); i++){
             System.out.println(list.get(i) + " ");
