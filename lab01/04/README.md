@@ -41,7 +41,7 @@ Rechtermuis op EquationService > New > Web Service
 
 We schrijven er onze methode in.
 
-```
+```java
 @WebMethod(operationName = "solveQuadratic")
 public double[] solveQuadratic(@WebParam(name = "a") int a, 
     @WebParam(name = "b") int b, @WebParam(name = "c") int c) {
