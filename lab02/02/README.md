@@ -102,4 +102,5 @@ We zien dat de handler als type Protocol heeft
 
 Als we nadien onze web service nog eens deployen en daarna het test programma laten lopen, dan zien we dat dit wel terug lukt.
 
-
+[arti]: https://jax-ws.java.net/articles/handlers_introduction.html
+[pagi]: http://gcmuganda.faculty.noctrl.edu/classes/Spring12/615/Lab4/CSC615Spring12MessageHandlersLab.html
