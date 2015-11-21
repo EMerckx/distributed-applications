@@ -20,7 +20,6 @@
         <mkdir dir="${build.generated.dir}/jax-wsCache/EquationService"/>
         <property name="wsdl-EquationService" location="xml-resources/web-service-references/EquationService/wsdl/localhost_8080/EquationService/EquationService.wsdl"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EquationService" destdir="${build.generated.dir}/jax-wsCache/EquationService" wsdl="${wsdl-EquationService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/EquationService/EquationService?wsdl" xnocompile="true" xendorsed="true">
-            <binding dir="xml-resources/web-service-references/EquationService/bindings" includes="EquationService_handler.xml"/>
             <depends file="${wsdl-EquationService}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/EquationService"/>
         </wsimport>
@@ -29,15 +28,27 @@
                 <include name="**/*.java"/>
             </fileset>
         </copy>
-        <copy todir="${build.classes.dir}">
-            <fileset dir="${build.generated.dir}/jax-wsCache/EquationService">
-                <include name="**/*.xml"/>
-            </fileset>
-        </copy>
     </target>
     <target name="wsimport-client-clean-EquationService" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/EquationService"/>
         <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-EquationService"/>
+    <target name="wsimport-client-EquationService_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EquationService_1"/>
+        <property name="wsdl-EquationService_1" location="xml-resources/web-service-references/EquationService_1/wsdl/localhost_8080/EquationService/EquationService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EquationService_1" destdir="${build.generated.dir}/jax-wsCache/EquationService_1" wsdl="${wsdl-EquationService_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/EquationService/EquationService?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-EquationService_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EquationService_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EquationService_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EquationService_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/EquationService_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/ws"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-EquationService, wsimport-client-EquationService_1"/>
 </project>

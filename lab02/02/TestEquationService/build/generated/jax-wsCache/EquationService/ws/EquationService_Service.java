@@ -3,7 +3,6 @@ package ws;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import javax.jws.HandlerChain;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 import javax.xml.ws.WebEndpoint;
@@ -19,7 +18,6 @@ import javax.xml.ws.WebServiceFeature;
  * 
  */
 @WebServiceClient(name = "EquationService", targetNamespace = "http://ws/", wsdlLocation = "http://localhost:8080/EquationService/EquationService?wsdl")
-@HandlerChain(file = "EquationService_Service_handler.xml")
 public class EquationService_Service
     extends Service
 {

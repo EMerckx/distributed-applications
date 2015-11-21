@@ -5,6 +5,7 @@
  */
 package ws;
 
+import javax.jws.HandlerChain;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -14,10 +15,12 @@ import javax.jws.WebParam;
  * @author EMerckx
  */
 @WebService(serviceName = "EquationService")
+@HandlerChain(file = "EquationService_handler.xml")
 public class EquationService {
 
     @WebMethod(operationName = "solveQuadratic")
-    public double[] solveQuadratic(@WebParam(name = "c2") int a, @WebParam(name = "c1") int b, @WebParam(name = "c0") int c) {
+    public double[] solveQuadratic(@WebParam(name = "c0") int a, @WebParam(
+            name = "c1") int b, @WebParam(name = "c2") int c) {
         int d = b * b - 4 * a * c;
 
         double[] solutions;
