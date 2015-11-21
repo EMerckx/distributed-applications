@@ -6,7 +6,7 @@ Herbekijk de volgende onderwerpen uit de bachelor:
 * [JAXP][jaxp]
 * [XSLT][xslt]
 
-en lees een artikel over handlers bij webservices.
+en lees een [artikel over handlers][arti] bij webservices.
 
 ## Opgave 1: Aanpassen EquationService
 
@@ -16,7 +16,9 @@ Pas nu de naam van de parameters in de annotaties @WebParam aan bv. c0, c1 en c2
 
 ## Handlers
 
-Schrijf een handler die ervoor zorgt dat de "oude" clientapplicatie toch werkt met de nieuwe serverapplicatie. Er zijn twee mogelijke opties: een SOAPHandler en een LogicalHandler. In dit labo implementeer je beide opties. Meer info over handlers vind je in dit artikel. De volgende pagina legt uit hoe je handlers kan toevoegen in Netbeans.
+Schrijf een handler die ervoor zorgt dat de "oude" clientapplicatie toch werkt met de nieuwe serverapplicatie. Er zijn twee mogelijke opties: een SOAPHandler en een LogicalHandler. In dit labo implementeer je beide opties. 
+
+Meer info over handlers vind je in dit [artikel][arti]. De volgende [pagina][pagi] legt uit hoe je handlers kan toevoegen in Netbeans.
 
 ### Opgave 2: SOAPHandler
 
@@ -28,3 +30,5 @@ Een alternatief voor de SOAPHandler is een LogicalHandler. Plaats in het juiste 
 
 [jaxp]: http://www.oracle.com/technetwork/java/intro-140052.html
 [xslt]: http://www.cheat-sheets.org/saved-copy/XSLT_1quickref-v2.pdf
+[arti]: https://jax-ws.java.net/articles/handlers_introduction.html
+[pagi]: http://gcmuganda.faculty.noctrl.edu/classes/Spring12/615/Lab4/CSC615Spring12MessageHandlersLab.html
