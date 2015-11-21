@@ -1,5 +1,22 @@
 # Opgave 4
 
+## Opgave
+
+Zelf een SOAP Web Service maken: Maak een nieuw Webproject EquationService. Definieer hierin een nieuwe Web Service EquationService in package ws.
+
+Definieer een operatie double[] solveQuadratic(double a, double b, double c) toe, die de nulpunten van de vierkantsvergelijking ax2+bx+c berekent. Het resultaat is een tabel van nul, een of twee reële getallen.
+Test uit via de browser. Enkele testcases:
+
+```
+x2-5x+6  --> {2,3}
+2x2-4x+2 --> {1}
+5x2+x+2  --> {}
+```
+
+Bekijk het SOAP-antwoord. Hoe wordt de nulpunten-array voorgesteld?
+
+## Oplossing
+
 We maken een nieuw project aan, namelijk een webproject genaamd EquationService.
 
 ```
@@ -23,6 +40,28 @@ Rechtermuis op EquationService > New > Web Service
 ```
 
 We schrijven er onze methode in.
+
+```
+@WebMethod(operationName = "solveQuadratic")
+public double[] solveQuadratic(@WebParam(name = "a") int a, 
+    @WebParam(name = "b") int b, @WebParam(name = "c") int c) {
+
+    int d = b * b - 4 * a * c;
+
+    double[] solutions;
+    if (d < 0) {
+        solutions = new double[0];
+    } else if (d == 0) {
+        solutions = new double[1];
+        solutions[0] = -b / (2 * a);
+    } else {
+        solutions = new double[2];
+        solutions[0] = (-b - Math.sqrt(d)) / (2 * a);
+        solutions[1] = (-b + Math.sqrt(d)) / (2 * a);
+    }
+    return solutions;
+}
+```
 
 Om deze te testen gaan we eerst het project builden en daarna deployen. 
 Als dit gebeurd is, dan kan de methode getest worden.
