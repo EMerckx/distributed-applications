@@ -182,6 +182,7 @@ public List<BadmintonClub> getBadmintonClubs()
             // add the BadmintonTournament to the list
             badmintonTournamentList.Add(badmintonTournament);
         }
+        badmintonClub.Tournaments = badmintonTournamentList;
 
         // add the BadmintonClub to the list
         badmintonClubList.Add(badmintonClub);

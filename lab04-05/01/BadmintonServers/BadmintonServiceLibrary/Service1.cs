@@ -51,6 +51,7 @@ namespace BadmintonServiceLibrary
                 // add the BadmintonClub to the list
                 badmintonClubList.Add(badmintonClub);
             }
+            badmintonClub.Tournaments = badmintonTournamentList;
 
             // return the List of BadmintonClub
             return badmintonClubList;
