@@ -2,7 +2,7 @@
 
 In this lab we are going to focus on network programming through the design and the implementation of a TicTacToe network game in Netbeans, see in the figure below.
 
-
+![Image with client server and Tic Tac Toe][tict]
 
 The Server can be connected to several clients as we can see in the above figure. Thus it can receive messages from any of those clients at any time and needs to process it.
 
@@ -28,4 +28,6 @@ Some constraints for this lab:
 
 ## Extra
 
-When the game is finished, players can decide to stay connected and wait for an oppent to play again.
+When the game is finished, players can decide to stay connected and wait for an opponent to play again.
+
+[tict]: https://raw.githubusercontent.com/EMerckx/distributed-applications/master/lab06-07/res/1.png
