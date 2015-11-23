@@ -29,7 +29,7 @@ Om de webservice te gebruiken gaan we ook code laten genereren, en dit in de mai
 Rechtermuis in main klasse > Insert Code > Call Web Service Operation
 ```
 
-And we get the following code generated.
+We krijgen de volgende code.
 
 ```java
 private static java.util.List<java.lang.Double> solveQuadratic(int a, 
@@ -41,7 +41,7 @@ private static java.util.List<java.lang.Double> solveQuadratic(int a,
 }
 ```
 
-After that, we just need to call the method.
+Nadien moeten we de methode enkel nog aanroepen.
 
 ```java
 public static void main(String[] args) {

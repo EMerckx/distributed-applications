@@ -1,5 +1,20 @@
 # Opgave 1
 
+## Opgave
+
+Voor de datalaag van de onderstaande GUI zullen we gebruik maken van de SOAP-webservice [DictService][dict].
+
+Bekijk de WSDL en test enkele operaties uit via de browser. Vraagjes:
+
+* Wat is de naam van de aangeboden service?
+* Welke poorten worden er gedefinieerd?
+* Welke transportprotocol gebruikt de DictServiceSoap-binding?
+* Welke operaties worden er in de DictServiceSoap-binding gedefinieerd?
+* Welke parameters verwacht de operatie MatchInDict?
+* Wat retourneert de operatie MatchInDict? 
+
+## Oplossing
+
 Voor de datalaag van de onderstaande GUI zullen we gebruik maken van de SOAP-webservice [DictService][dict].
 
 Bekijk de WSDL en test enkele operaties uit via de browser: [link][wsdl]. 

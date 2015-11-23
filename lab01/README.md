@@ -1,4 +1,4 @@
-# GUI met als datalaag een SOAP-webservice
+# Labo 1: GUI met als datalaag een SOAP-webservice
 
 ## Opgave 1
 

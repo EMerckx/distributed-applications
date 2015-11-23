@@ -33,7 +33,7 @@ We maken ook een nieuwe package aan.
 Rechtermuis op EquationService > New > Java Package
 ```
 
-En we vullen alle nodige velden in. Ook maken we een nieuwe 
+En we vullen alle nodige velden in. Als naam kiezen we ws. Ook maken we een nieuwe service aan.
 
 ```
 Rechtermuis op EquationService > New > Web Service

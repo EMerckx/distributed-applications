@@ -1,5 +1,15 @@
 # Opgave 2
 
+## Opgave
+
+Maak een NetBeans-project om de web service te testen (een gewone console-applicatie). Vraag aan de gebruiker een tekst, haal verbetersuggesties op via de webservice, en schrijf deze uit.
+
+Tips: Laat NetBeans de Web Service Client genereren. 
+
+![Spell checker in console application][spell]
+
+## Oplossing
+
 We openen eerst Netbeans. Daarna maken we een nieuw project aan.
 
 ```
@@ -38,3 +48,4 @@ for(int i=0; i<arr.getDictionaryWord().size(); i++){
 System.out.println(" ");
 ```
 
+[spell]: https://raw.githubusercontent.com/EMerckx/distributed-applications/master/lab01/res/spellcheck.png
