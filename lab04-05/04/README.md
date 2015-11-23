@@ -26,7 +26,7 @@ Rechtermuis op project > Add Reference > Solution
 Daar kiezen we de reference van de BadmintonServiceLibrary
 ```
 
-Nu moeten we de App.config aanpassen
+Nu moeten we de App.config aanpassen. Hiervoor kopiëren we de App.config van BadmintonServiceLibrary, zodat we enkel nog maar een aantal termen moeten aanpassen.
 
 ```
 <?xml version="1.0" encoding="utf-8" ?>
