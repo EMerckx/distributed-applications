@@ -1,4 +1,4 @@
-# Opgave 2
+# Opgave 2: SOAPHandler
 
 Schrijf een handler die ervoor zorgt dat de "oude" clientapplicatie toch werkt met de nieuwe serverapplicatie. Er zijn twee mogelijke opties: een SOAPHandler en een LogicalHandler. In dit labo implementeer je beide opties. 
 
@@ -12,7 +12,7 @@ Voeg in Netbeans een SOAPHandler toe en configureer de webservice zodat de handl
 
 We laden de EquationService en de TestEquationService projecten in Netbeans in. We veranderen ook de namen van de parameters in onze web methode van de EquationService klasse.
 
-```
+```java
 @WebMethod(operationName = "solveQuadratic")
 public double[] solveQuadratic(@WebParam(name = "c0") int a, @WebParam(
         name = "c1") int b, @WebParam(name = "c2") int c)

@@ -1,4 +1,4 @@
-# Opgave 1
+# Opgave 1: Aanpassen EquationService
 
 ## Opgave
 
@@ -8,6 +8,16 @@ Pas nu de naam van de parameters in de annotaties @WebParam aan bv. c0, c1 en c2
 
 ## Oplossing
 
-Indien we de namen van de web param gaan aanpassen, dan kan de client die niet meer correct aanspreken.
+We laden de EquationService en de TestEquationService projecten in Netbeans in. We veranderen ook de namen van de parameters in onze web methode van de EquationService klasse.
+
+```java
+@WebMethod(operationName = "solveQuadratic")
+public double[] solveQuadratic(@WebParam(name = "c0") int a, @WebParam(
+        name = "c1") int b, @WebParam(name = "c2") int c)
+```
+
+Als we nadien de main methode van TestEquationService uitvoeren krijgen we een exceptie.
+
+Dus: indien we de namen van de web param gaan aanpassen, dan kan de client die niet meer correct aanspreken.
 
 

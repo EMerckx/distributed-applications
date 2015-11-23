@@ -1,4 +1,4 @@
-# Opgave 2
+# Opgave 3: LogicalHandler
 
 Schrijf een handler die ervoor zorgt dat de "oude" clientapplicatie toch werkt met de nieuwe serverapplicatie. Er zijn twee mogelijke opties: een SOAPHandler en een LogicalHandler. In dit labo implementeer je beide opties. 
 
