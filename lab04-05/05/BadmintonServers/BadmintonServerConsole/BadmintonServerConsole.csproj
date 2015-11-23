@@ -87,9 +87,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BadmintonService\BadmintonService.csproj">
-      <Project>{11c3ff19-bae0-4bad-ab41-24ec0321390c}</Project>
-      <Name>BadmintonService</Name>
+    <ProjectReference Include="..\BadmintonServiceLibrary\BadmintonServiceLibrary.csproj">
+      <Project>{15b3e0d2-6217-493a-a690-158c497f5318}</Project>
+      <Name>BadmintonServiceLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,17 +16,14 @@ In onze solution gaan we een nieuw project toevoegen, namelijk een Console Appli
 Rechtermuis op solution > Add > New Project > Visual C# > Windows 
 	> Console Application
 
-Noem het project BadmintonClientConsole
+Noem het project BadmintonServerConsole
 ```
 
-We voegen dan een service reference toe
+We voegen dan een reference toe. Dit mag geen Server Reference zijn, maar moet een reference naar een DLL zijn!
 
 ```
-Rechtermuis op project > Add Service Reference
-Via Discover kunnen we de juiste service vinden
-
-We kiezen voor Service1.svc
-Als naam geven we BadmintonServiceReference in
+Rechtermuis op project > Add Reference > Solution
+Daar kiezen we de reference van de BadmintonServiceLibrary
 ```
 
 Nu moeten we de App.config aanpassen
@@ -40,17 +37,18 @@ Nu moeten we de App.config aanpassen
   <system.serviceModel>
     <services>
       <service name="BadmintonServiceLibrary.Service1">
-        <endpoint address="" binding="netTcpBinding" 
-                   contract="BadmintonServiceReference.IService1">
+        <endpoint address="" binding="netTcpBinding"
+                   contract="BadmintonServiceLibrary.IService1">
           <identity>
             <dns value="localhost"/>
           </identity>
         </endpoint>
-        <endpoint contract="IMetadataExchange" binding="mexTcpBinding" 
+        <endpoint contract="IMetadataExchange" binding="mexTcpBinding"
                   address="mex"/>
         <host>
           <baseAddresses>
-            <add baseAddress="net.tcp://localhost:2927/Service1.svc"/>
+            <add baseAddress=
+              "net.tcp://localhost:8732/BadmintonServer/BadmintonService"/>
           </baseAddresses>
         </host>
       </service>
@@ -63,20 +61,27 @@ Nu moeten we de App.config aanpassen
         </behavior>
       </serviceBehaviors>
     </behaviors>
-    <!--<bindings>
-            <basicHttpBinding>
-                <binding name="BasicHttpBinding_IService1" />
-            </basicHttpBinding>
-        </bindings>
-        <client>
-            <endpoint address="http://localhost:2927/Service1.svc" 
-                binding="basicHttpBinding"
-                bindingConfiguration="BasicHttpBinding_IService1" 
-                contract="BadmintonServiceReference.IService1"
-                name="BasicHttpBinding_IService1" />
-        </client>-->
   </system.serviceModel>
 </configuration>
 ```
+
+En dan schrijven we het volgende in de Main methode van Program.cs
+
+```c#
+static void Main(string[] args)
+{
+    using (ServiceHost serviceHost = 
+      new ServiceHost(typeof(BadmintonServiceLibrary.Service1)))
+    {
+        serviceHost.Open();
+
+        Console.WriteLine("The server is ready ");
+
+        Console.ReadLine();
+    }
+}
+```
+
+Nadien debuggen we het project en zien we dat het werkt
 
 [4-1]: https://raw.githubusercontent.com/EMerckx/distributed-applications/master/lab04-05/res/4-1.png
