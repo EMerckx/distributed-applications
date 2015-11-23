@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadmintonServiceLibrary", "BadmintonServiceLibrary\BadmintonServiceLibrary.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadmintonService", "BadmintonService\BadmintonService.csproj", "{11C3FF19-BAE0-4BAD-AB41-24EC0321390C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadmintonClientConsole", "BadmintonClientConsole\BadmintonClientConsole.csproj", "{CED214EE-28A6-4649-B0AE-234069D2A87C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C} = {11C3FF19-BAE0-4BAD-AB41-24EC0321390C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadmintonServerConsole", "BadmintonServerConsole\BadmintonServerConsole.csproj", "{71F72D81-3BF5-49AF-AE58-90A1407E392A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C} = {11C3FF19-BAE0-4BAD-AB41-24EC0321390C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadmintonWebClient", "BadmintonWebClient\BadmintonWebClient.csproj", "{AAC44D58-9F6E-41E0-B9F7-87B383D4139E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C} = {11C3FF19-BAE0-4BAD-AB41-24EC0321390C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C3FF19-BAE0-4BAD-AB41-24EC0321390C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED214EE-28A6-4649-B0AE-234069D2A87C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED214EE-28A6-4649-B0AE-234069D2A87C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED214EE-28A6-4649-B0AE-234069D2A87C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED214EE-28A6-4649-B0AE-234069D2A87C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F72D81-3BF5-49AF-AE58-90A1407E392A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F72D81-3BF5-49AF-AE58-90A1407E392A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F72D81-3BF5-49AF-AE58-90A1407E392A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F72D81-3BF5-49AF-AE58-90A1407E392A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC44D58-9F6E-41E0-B9F7-87B383D4139E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC44D58-9F6E-41E0-B9F7-87B383D4139E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC44D58-9F6E-41E0-B9F7-87B383D4139E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC44D58-9F6E-41E0-B9F7-87B383D4139E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
